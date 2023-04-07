@@ -1,0 +1,101 @@
+#include<iostream>
+using namespace std;
+
+void printArray(int arr[],int size){
+    cout<<"Printing the array"<<endl;
+    for(int i=0;i<size;i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<"printing Done"<<endl;
+
+}
+
+int main(){
+
+    int third[10]={1,2,3,4,5,6,7,8,9,10};
+    printArray(third,12);
+
+    
+    int fourth[5]={1,6,8,9,10};
+    printArray(fourth,10);
+
+
+}
+
+//Maximum and Minimum value 
+#include<iostream>
+using namespace std;
+
+int getMax(int num[],int n){
+    int max=INT_MIN;
+    
+    for(int i=0;i<n;i++){
+        if(num[i]>max){
+            max=num[i];
+        }
+    }
+    //return Maximum
+    return max;
+}
+
+int getMin(int num[],int n){
+    int min=INT_MAX;
+    for(int i=0;i<n;i++){
+        if(num[i]< min){
+            min=num[i];
+        }
+    }
+    //return Minimum
+    return min;
+}
+
+int main(){
+    int size;
+    cin>>size;
+    int num[100];
+    for(int i=0;i<size;i++){
+        cin>>num[i];
+    }
+    cout<<"The Size of the array is :"<<size<<endl;
+    cout<<"Maximum Value is:"<<getMax(num,size)<<endl;
+    cout<<"Minimum Value is:"<<getMin(num,size)<<endl;
+
+}
+
+//Optimize the above code by predefined functions
+#include<iostream>
+using namespace std;
+
+int getMax(int num[],int n){
+    int maxNum=INT_MIN;
+
+    for(int i=0;i<n;i++){
+        maxNum=max(maxNum,num[i]);//predefined functions for max 
+    }
+    //return Maximum
+    return maxNum;
+}
+
+int getMin(int num[],int n){
+    int minNum=INT_MAX;
+    for(int i=0;i<n;i++){
+        minNum=min(minNum,num[i]);//predefined functions for Min 
+
+    }
+    //return Minimum
+    return minNum;
+}
+
+int main(){
+    int size;
+    cin>>size;
+    int num[100];
+    for(int i=0;i<size;i++){
+        cin>>num[i];
+    }
+    cout<<"The Size of the array is :"<<size<<endl;
+    cout<<"Maximum Value is:"<<getMax(num,size)<<endl;
+    cout<<"Minimum Value is:"<<getMin(num,size)<<endl;
+
+}
+
