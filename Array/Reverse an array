@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+
+void reverse(int arr[],int n){
+    int start =0;
+    int end=n-1;
+
+    while(start<=end){
+        swap(arr[start],arr[end]);
+        start++;
+        end--;
+    }  
+}
+
+void printArray(int arr[],int n){
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+}
+int main(){
+     int arr[10]={2,3,4,5,100,112,1,23,434,53};
+     int brr[11]={223,2,34,123,4341,123,313,12,3,33,445};
+
+     reverse(arr,10);
+     reverse(brr,11);
+
+     printArray(arr,10);
+     printArray(brr,11);
+        
+}
