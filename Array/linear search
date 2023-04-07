@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+bool search(int arr[],int size , int key){
+    for(int i=0;i<size;i++){
+        if(arr[i]==key){
+            return 1;
+        } //no else block as it will stop after first element
+
+    }
+            return 0;
+
+}
+
+int main(){
+     int arr[10]={2,3,4,5,100,112,1,23,434,53};
+     cout<<"Enter the Element to search for :"<<endl;
+     int key;
+     cin>>key;
+     bool found =search(arr,10,key);
+     if(found){
+        cout<<"Key is found"<<endl;
+     } else{
+        cout<<"Key is not Found";
+
+     }
+     return 0;
+}
